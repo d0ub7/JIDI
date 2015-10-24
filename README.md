@@ -1,4 +1,4 @@
 # JIDI
-Jellyneo Item Database Injector
-Requires CORS plugin for Chrome
-Install with Tampermonkey
+Jellyneo Item Database Injector /n
+Requires CORS plugin for Chrome /n
+Install with Tampermonkey /n
