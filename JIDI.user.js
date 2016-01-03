@@ -22,25 +22,27 @@ jQuery.fn.justtext = function() {
 
 function highlight(itemWorth, itemCost, element) {  // set minimum profit / highlight colors here
 	var profit = itemWorth - itemCost;
-		if (itemCost !== 0  &&  profit > 1000) { 
-			var color = "#ffd";
-			if (profit > 5000) {
-			color = "#66FF33";
-				if (profit > 15000) {
-				color = "#0000FF";
-					if (profit > 30000) {
-					color = "#9900FF";
-						if (profit > 100000) {
-						color = "#f38";
-							if (profit > 500000) {
-							color = "#FF9900"
-						}              
-					}
-				}
-			}
-		}
-		element.parent().css("background-color", color); 
-	}
+    if (itemCost !== 0) { 
+        if (profit > 5000) {
+            color = "#66FF33";
+            if (profit > 15000) {
+                color = "#0000FF";
+                if (profit > 30000) {
+                    color = "#9900FF";
+                    if (profit > 100000) {
+                        color = "#f38";
+                        if (profit > 500000) {
+                            color = "#FF9900"
+                        }              
+                    }
+                }
+            }
+            element.parent().css("background-color", color); 
+        }
+        else { 
+            element.parent().hide(); 
+        }       
+    }
 }
 
 function getWorth(itemName, element, order, itemCost) {
